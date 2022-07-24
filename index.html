@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="./scripts/script.js" defer></script>
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <main>
 
-  Bill
+    <img src="./images/logo.svg" alt="Company Logo">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+    <section class="bill">
+      <h1>Bill</h1>
+      <div class="bill-entry">
+        <img src="./images/icon-dollar.svg" alt="Dollar Icon"> 
+        <input type="text" name="bill-amount" id="bill-amount">
+      </div>
+    </section>
 
-  Number of People
+    <section class="select-tip">
+      <h1>Select Tip %</h1>
+      <button>5%</button>
+      <button>10%</button>
+      <button>15%</button>
+      <button>25%</button>
+      <button>50%</button>
+      <button>Custom</button>
+    </section>
 
-  Tip Amount
-  / person
+    <section class="people">
+      <h1>Number of People</h1>
+      <div class="people-entry">
+        <img src="./images/icon-person.svg" alt="Person Icon"> 
+        <input type="text" name="people-entry" id="people-entry">
+      </div>
+    </section>
 
-  Total
-  / person
+    <section class="result">
+      <div class="result-left">
+        Tip Amount
+        / person
+      </div>
+      <div class="amount-per-person">4.27</div>
+      <div class="result-left">
+        Total
+        / person
+      </div>
+      <div class="total-per-person">32.79</div>
+      <button class="reset">Reset</button>
+    </section>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
+
 </body>
+
 </html>
