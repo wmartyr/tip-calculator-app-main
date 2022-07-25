@@ -17,14 +17,14 @@
 </head>
 
 <body>
-  <img src="./images/logo.svg" alt="Company Logo">
+  <img src="./images/logo.svg" alt="Company Logo" class="logo">
   <main>
 
     <section class="bill">
       <h1>Bill</h1>
       <div class="bill-entry input-line">
         <img src="./images/icon-dollar.svg" alt="Dollar Icon" class="input-icon">
-        <input type="text" name="bill-amount" id="bill-amount">
+        <input type="text" name="bill-amount" id="bill-amount" placeholder="0">
       </div>
     </section>
 
@@ -42,22 +42,30 @@
       <h1>Number of People</h1>
       <div class="people-entry input-line">
         <img src="./images/icon-person.svg" alt="Person Icon">
-        <input type="text" name="people-entry" id="people-entry">
+        <input type="text" name="people-entry" id="people-entry" placeholder="0">
       </div>
     </section>
 
-    <section class="result">
-      <div class="result-left">
-        Tip Amount
-        / person
+    <section class="results">
+      <div class="result-row">
+        <div class="result-left">
+          <p class="result-type">Tip Amount</p>
+          <p class="per-person">/ person</p>
+        </div>
+        <div class="amount-per-person result-value">
+          $0.00
+        </div>
       </div>
-      <div class="amount-per-person">4.27</div>
-      <div class="result-left">
-        Total
-        / person
+      <div class="result-row">
+        <div class="result-left">
+          <p class="result-type">Total</p>
+          <p class="per-person">/ person</p>
+        </div>
+        <div class="total-per-person result-value">
+          $0.00
+        </div>
       </div>
-      <div class="total-per-person">32.79</div>
-      <button class="reset">Reset</button>
+      <button class="reset-button">RESET</button>
     </section>
 
   </main>

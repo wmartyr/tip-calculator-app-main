@@ -71,6 +71,7 @@ select {
 :root {
   --color-primary-strong-cyan: hsl(172, 67%, 45%);
   --color-very-dark-cyan: hsl(183, 100%, 15%);
+  --color-dark-cyan: hsl(183, 79%, 24%);
   --color-dark-grayish-cyan: hsl(186, 14%, 43%);
   --color-grayish-cyan: hsl(184, 14%, 56%);
   --color-light-grayish-cyan: hsl(185, 41%, 84%);
@@ -87,6 +88,10 @@ body {
   padding-top: 1.6rem;
 
   background-color: var(--color-light-grayish-cyan);
+}
+
+.logo {
+  margin: 0.5rem;
 }
 
 main {
@@ -124,7 +129,7 @@ input {
   border: none;
   background-color: var(--color-very-light-grayish-cyan);
   text-align: right;
-  color: var(--color-very-dark-cyan);
+  color: var(--color-grayish-cyan);
   font-size: 1.5rem;
   font-weight: 700;
   width: 50%;
@@ -154,6 +159,7 @@ button {
   cursor: pointer;
   text-align: center;
   border-radius: 5px;
+  height: 2.7rem;
 }
 
 .custom-button {
@@ -161,6 +167,45 @@ button {
   color: var(--color-dark-grayish-cyan);
 }
 
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: stretch;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: var(--color-very-dark-cyan);
+  border-radius: 10px;
+}
+
+.result-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.result-type {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.per-person {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-dark-grayish-cyan);
+}
+
+.result-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary-strong-cyan);
+}
+
+.reset-button {
+  background-color: var(--color-dark-cyan);
+  color: var(--color-very-dark-cyan);
+}
 
 .attribution {
   font-size: 11px;
