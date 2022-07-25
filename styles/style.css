@@ -3,7 +3,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  outline: dotted gray 1px;
+  /* outline: dotted gray 1px; */
 }
 
 /* Remove default margin */
@@ -93,19 +93,45 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   gap: 1.6rem;
   border-radius: 20px 20px 0 0;
   background-color: white;
   width: 100%;
+  padding: 1.6rem;
 }
 
-section {
+h1 {
+  font-size: 0.8rem;
+  color: var(--color-dark-grayish-cyan);
 }
 
-.bill {
+.input-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-very-light-grayish-cyan);
+  padding: 0 1rem;
+  /* padding-left: 1rem; */
+  /* padding-right: 1rem; */
+  border-radius: 10px;
 }
 
+.input-icon {
+  height: 1rem;
+}
+
+input {
+  border: none;
+  background-color: var(--color-very-light-grayish-cyan);
+  text-align: right;
+  color: var(--color-very-dark-cyan);
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 50%;
+  /* height: 1.5rem; */
+}
 
 .attribution {
   font-size: 11px;
