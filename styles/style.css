@@ -102,7 +102,7 @@ main {
 }
 
 h1 {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--color-dark-grayish-cyan);
 }
 
@@ -113,9 +113,7 @@ h1 {
   align-items: center;
   background-color: var(--color-very-light-grayish-cyan);
   padding: 0 1rem;
-  /* padding-left: 1rem; */
-  /* padding-right: 1rem; */
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .input-icon {
@@ -130,8 +128,39 @@ input {
   font-size: 1.5rem;
   font-weight: 700;
   width: 50%;
-  /* height: 1.5rem; */
 }
+
+.select-tip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1rem 2.7rem 2.7rem 2.7rem;
+  gap: 1rem 1rem;
+
+}
+
+.select-tip-subheader {
+  grid-column: span 2;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: var(--color-very-dark-cyan);
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.custom-button {
+  background-color: var(--color-very-light-grayish-cyan);
+  color: var(--color-dark-grayish-cyan);
+}
+
 
 .attribution {
   font-size: 11px;
