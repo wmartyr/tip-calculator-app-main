@@ -55,9 +55,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -75,6 +75,35 @@ select {
   --color-grayish-cyan: hsl(184, 14%, 56%);
   --color-light-grayish-cyan: hsl(185, 41%, 84%);
   --color-very-light-grayish-cyan: hsl(189, 41%, 97%);
+  font-family: 'Space Mono', monospace;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1.6rem;
+  padding-top: 1.6rem;
+
+  background-color: var(--color-light-grayish-cyan);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  border-radius: 20px 20px 0 0;
+  background-color: white;
+  width: 100%;
+}
+
+section {
+}
+
+.bill {
 }
 
 
