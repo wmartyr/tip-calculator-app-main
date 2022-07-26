@@ -35,11 +35,14 @@
         <button>15%</button>
         <button>25%</button>
         <button>50%</button>
-        <button class="custom-button">Custom</button>
+        <input type="text" name="custom-tip" id="custom-tip" placeholder="Custom" class="custom-tip">
       </div>
 
       <div class="people">
-        <h1>Number of People</h1>
+        <div class="people-row">
+          <h1 class="number-of-persons">Number of People</h1>
+          <p class="zero-division-error">Can't be zero</p>
+        </div>
         <div class="people-entry input-line">
           <img src="./images/icon-person.svg" alt="Person Icon">
           <input type="text" name="people-entry" id="people-entry" placeholder="0">

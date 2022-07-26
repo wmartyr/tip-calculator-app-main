@@ -47,6 +47,7 @@ select {
   --color-primary-strong-cyan: hsl(172, 67%, 45%);
   --color-very-dark-cyan: hsl(183, 100%, 15%);
   --color-dark-cyan: hsl(183, 79%, 24%);
+  --color-light-cyan: hsl(173, 60%, 76%);
   --color-dark-grayish-cyan: hsl(186, 14%, 43%);
   --color-grayish-cyan: hsl(184, 14%, 56%);
   --color-light-grayish-cyan: hsl(185, 41%, 84%);
@@ -61,7 +62,6 @@ body {
   align-items: center;
   gap: 1.6rem;
   padding-top: 1.6rem;
-
   background-color: var(--color-light-grayish-cyan);
 }
 
@@ -102,6 +102,12 @@ h1 {
   background-color: var(--color-very-light-grayish-cyan);
   padding: 0 1rem;
   border-radius: 5px;
+  border: solid 2px var(--color-very-light-grayish-cyan);
+}
+
+.input-line:hover {
+  border: solid 2px var(--color-primary-strong-cyan);
+  cursor: pointer;
 }
 
 .input-icon {
@@ -117,6 +123,15 @@ input {
   font-weight: 700;
   width: 50%;
 }
+
+input:hover {
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+}
+
 
 .select-tip {
   display: grid;
@@ -142,13 +157,38 @@ button {
   cursor: pointer;
   text-align: center;
   border-radius: 5px;
-  height: 2.7rem;   
+  height: 2.7rem;
   padding: 0;
 }
 
-.custom-button {
-  background-color: var(--color-very-light-grayish-cyan);
+button:hover {
+  background-color: var(--color-light-cyan);
+  color: var(--color-very-dark-cyan);
+}
+
+.custom-tip {
+  height: 2.7rem;
+  padding: 0;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
   color: var(--color-dark-grayish-cyan);
+}
+
+.custom-tip:hover {
+  border: solid 2px var(--color-primary-strong-cyan);
+}
+
+.people-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.zero-division-error {
+  display: none;
+  color: red;
+  font-weight: 700;
 }
 
 .results {
@@ -192,6 +232,11 @@ button {
 }
 
 @media only screen and (min-width: 376px) {
+
+  .logo {
+    margin: 3rem;
+  }
+
   main {
     display: flex;
     flex-direction: row;
@@ -199,6 +244,10 @@ button {
     align-items: stretch;
     border-radius: 20px;
     width: 750px;
+  }
+
+  .data-entry {
+    width: 50%;
   }
 
   .select-tip {
