@@ -12,11 +12,7 @@ h1,
 h2,
 h3,
 h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+p {
   margin: 0;
 }
 
@@ -32,11 +28,6 @@ body {
   line-height: 1.5;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
 /* Make images easier to work with */
 img,
 picture {
@@ -50,22 +41,6 @@ button,
 textarea,
 select {
   font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
 }
 
 :root {
@@ -102,8 +77,15 @@ main {
   gap: 1.6rem;
   border-radius: 20px 20px 0 0;
   background-color: white;
-  width: 100%;
   padding: 1.6rem;
+}
+
+.data-entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.6rem;
 }
 
 h1 {
@@ -193,7 +175,7 @@ button {
 .per-person {
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--color-dark-grayish-cyan);
+  color: var(--color-grayish-cyan);
 }
 
 .result-value {
