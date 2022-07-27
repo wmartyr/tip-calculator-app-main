@@ -114,6 +114,10 @@ h1 {
   height: 1rem;
 }
 
+.data-entered {
+  color: var(--color-very-dark-cyan);
+}
+
 input {
   border: none;
   background-color: var(--color-very-light-grayish-cyan);
@@ -171,13 +175,12 @@ button:hover {
   color: var(--color-very-dark-cyan);
 }
 
-.custom-tip {
+#custom-tip {
   height: 2.7rem;
   padding: 0;
   width: 100%;
   border-radius: 5px;
   text-align: center;
-  color: var(--color-dark-grayish-cyan);
 }
 
 .custom-tip:hover {
