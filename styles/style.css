@@ -166,6 +166,11 @@ button:hover {
   color: var(--color-very-dark-cyan);
 }
 
+.button-selected {
+  background-color: var(--color-primary-strong-cyan);
+  color: var(--color-very-dark-cyan);
+}
+
 .custom-tip {
   height: 2.7rem;
   padding: 0;
