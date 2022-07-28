@@ -13,11 +13,30 @@ const customTipEntry = document.querySelector("#custom-tip");
 const errorMessage = document.querySelector("#error-message");
 const tipPerPersonResult = document.querySelector(".tip-per-person");
 const totalPerPersonResult = document.querySelector(".total-per-person");
+const resetButton = document.querySelector(".reset-button");
 let lastButton = document.querySelector(lastButtonId);
 
-billEntry.value = "";
-customTipEntry.value = "";
-numberOfPeopleEntry.value = "";
+function calculateResult() {
+  if (billAmount !== 0 && tipAmount !== 0 && numberOfPeople !== 0) {
+    tipPerPerson = billAmount * tipAmount / 100 / numberOfPeople;
+    totalPerPerson = (billAmount / numberOfPeople) + tipPerPerson;
+    tipPerPersonResult.textContent = `$${tipPerPerson.toFixed(2)}`;
+    totalPerPersonResult.textContent = `$${totalPerPerson.toFixed(2)}`;
+  }
+}
+
+function resetValues() {
+  billEntry.value = "";
+  customTipEntry.value = "";
+  numberOfPeopleEntry.value = "";
+  billAmount = 0;
+  tipAmount = 0;
+  numberOfPeople = 0;
+  lastButton = document.querySelector(lastButtonId);
+  lastButton.classList.remove("button-selected");
+}
+
+resetValues();
 
 billEntry.addEventListener("keyup", () => {
   billEntry.classList.add("data-entered");
@@ -68,12 +87,6 @@ numberOfPeopleEntry.addEventListener("keyup", () => {
   console.log({ numberOfPeople });
 });
 
-function calculateResult() {
-  if (billAmount !== 0 && tipAmount !== 0 && numberOfPeople !== 0) {
-    tipPerPerson = billAmount * tipAmount / 100 / numberOfPeople;
-    totalPerPerson = (billAmount / numberOfPeople) + tipPerPerson;
-    tipPerPersonResult.textContent = `$${tipPerPerson.toFixed(2)}`;
-    totalPerPersonResult.textContent = `$${totalPerPerson.toFixed(2)}`;
-  }
-
-}
+resetButton.addEventListener("click", () => {
+  resetValues();
+})
