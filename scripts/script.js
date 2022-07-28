@@ -38,28 +38,32 @@ function resetValues() {
 
 resetValues();
 
+// set bill amount
+// set it to zero if invalid value entered
 billEntry.addEventListener("keyup", () => {
   billEntry.classList.add("data-entered");
   billAmount = isNaN(parseFloat(billEntry.value)) ? 0 : parseFloat(billEntry.value);
-  console.log({ billAmount });
   calculateResult();
 })
 
+// listen for clicks on preset tip values
+// this will set button appearance when clicked
+// this also resets the custom tip input field
 tips.forEach((tip) => {
   tip.addEventListener("click", () => {
     customTipEntry.value = "";
     customTipEntry.classList.remove("data-entered");
-
     tipAmount = parseInt(tip.id.slice(4));
     calculateResult();
     lastButton = document.querySelector(lastButtonId);
     lastButton.classList.remove("button-selected");
     tip.classList.add("button-selected");
     lastButtonId = "#" + tip.id;
-    console.log({ tipAmount });
   });
 });
 
+// set custom tips. Value is zero if invalid
+// this also resets the preset button appearance
 customTipEntry.addEventListener("keyup", () => {
   customTipEntry.classList.add("data-entered");
   tipAmount = isNaN(parseFloat(customTipEntry.value)) ? 0 : parseFloat(customTipEntry.value);
@@ -69,9 +73,10 @@ customTipEntry.addEventListener("keyup", () => {
     lastButton.classList.remove("button-selected");
     lastButtonId = "#tip-5";
   }
-  console.log({ tipAmount });
 });
 
+// set number of people. Value is zero if invalid
+// also sets appearance if value is zero
 numberOfPeopleEntry.addEventListener("keyup", () => {
   numberOfPeopleEntry.classList.add("data-entered");
   numberOfPeople = parseInt(numberOfPeopleEntry.value);
@@ -84,7 +89,6 @@ numberOfPeopleEntry.addEventListener("keyup", () => {
     peopleEntry.classList.remove("people-entry-error");
   }
   calculateResult();
-  console.log({ numberOfPeople });
 });
 
 resetButton.addEventListener("click", () => {

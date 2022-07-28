@@ -193,6 +193,7 @@ button:hover {
   justify-content: space-between;
 }
 
+/* removed from .error-message when number of people is zero */
 .no-error {
   display:none;
 }
@@ -202,6 +203,7 @@ button:hover {
   font-weight: 700;
 }
 
+/* added to .people-entry when the number of people is zero */
 .people-entry-error {
   border: solid 2px red;
 }
