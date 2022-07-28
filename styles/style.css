@@ -193,10 +193,17 @@ button:hover {
   justify-content: space-between;
 }
 
+.no-error {
+  display:none;
+}
+
 .zero-division-error {
-  display: none;
   color: red;
   font-weight: 700;
+}
+
+.people-entry-error {
+  border: solid 2px red;
 }
 
 .results {

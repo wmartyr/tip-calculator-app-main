@@ -1,14 +1,18 @@
 let billAmount = 0;
 let tipAmount = 0;
 let lastButtonId = "#tip-5";
+let numberOfPeople = 0;
 const billEntry = document.querySelector("#bill-amount");
 const tips = document.querySelectorAll(".tip-button");
-const numberOfPeople = document.querySelector("people-entry");
+const numberOfPeopleEntry = document.querySelector("#people-entry");
+const peopleEntry = document.querySelector(".people-entry");
 const customTipEntry = document.querySelector("#custom-tip");
+const errorMessage = document.querySelector("#error-message");
 let lastButton = document.querySelector(lastButtonId);
 
 billEntry.value = "";
 customTipEntry.value = "";
+numberOfPeopleEntry.value = "";
 
 billEntry.addEventListener("keyup", () => {
   billEntry.classList.add("data-entered");
@@ -41,3 +45,17 @@ customTipEntry.addEventListener("keyup", () => {
   }
   console.log({ tipAmount });
 });
+
+numberOfPeopleEntry.addEventListener("keyup", () => {
+  numberOfPeopleEntry.classList.add("data-entered");
+  numberOfPeople = parseInt(numberOfPeopleEntry.value);
+  if (numberOfPeople === 0) {
+    errorMessage.classList.remove("no-error");
+    peopleEntry.classList.add("people-entry-error");
+  } else if (isNaN(numberOfPeople)) {
+    numberOfPeople = 0;
+    errorMessage.classList.add("no-error");
+    peopleEntry.classList.remove("people-entry-error");
+  }
+  console.log({ numberOfPeople });
+})
